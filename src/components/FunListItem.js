@@ -20,7 +20,9 @@ class FunListItem extends Component {
     }
     return (
       <ListItem className={this.props.classes.root}>
-        <ListItemText primary={this.props.fun.name} />
+        <ListItemText
+          primary={this.props.fun.id + ': ' + this.props.fun.name}
+        />
         <Button variant="extendedFab" onClick={this.props.onDelete}>
           <DeleteIcon />
           Delete
